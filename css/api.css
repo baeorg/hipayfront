@@ -1,0 +1,309 @@
+/* API文档页面样式 */
+.api-docs {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+}
+
+.api-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.api-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.api-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.api-credentials {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.api-credentials h2 {
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.api-button {
+  display: inline-block;
+  background: #3498db;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.api-button:hover {
+  background: #2980b9;
+}
+
+.api-endpoints,
+.api-authentication,
+.api-errors,
+.api-libraries,
+.api-webhooks {
+  margin-bottom: 3rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.api-endpoints h2,
+.api-authentication h2,
+.api-errors h2,
+.api-libraries h2,
+.api-webhooks h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.api-endpoints h3,
+.api-authentication h3,
+.api-errors h3,
+.api-libraries h3,
+.api-webhooks h3 {
+  color: #3498db;
+  margin: 1.5rem 0 1rem;
+}
+
+.endpoint-tabs {
+  margin-top: 2rem;
+}
+
+.tab-buttons {
+  display: flex;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 1.5rem;
+}
+
+.tab-button {
+  padding: 0.8rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #777;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.tab-button:hover {
+  color: #3498db;
+}
+
+.tab-button.active {
+  color: #3498db;
+}
+
+.tab-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #3498db;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.endpoint {
+  margin-bottom: 2rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.endpoint h3 {
+  padding: 1rem;
+  margin: 0;
+  background: #f9f9f9;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.endpoint-details {
+  padding: 1.5rem;
+}
+
+.endpoint-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.method {
+  padding: 0.3rem 0.8rem;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.get {
+  background: #61affe;
+}
+
+.post {
+  background: #49cc90;
+}
+
+.put {
+  background: #fca130;
+}
+
+.delete {
+  background: #f93e3e;
+}
+
+.path {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #333;
+}
+
+.code-block {
+  background: #f5f5f5;
+  border-radius: 5px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.code-block pre {
+  margin: 0;
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.params-list {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.params-list li {
+  margin-bottom: 0.5rem;
+}
+
+.params-list code {
+  font-family: monospace;
+  background: #f5f5f5;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+.error-codes {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.error-codes th,
+.error-codes td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.error-codes th {
+  background: #f9f9f9;
+  font-weight: bold;
+  color: #333;
+}
+
+.libraries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.library-card {
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.library-card h3 {
+  padding: 1rem;
+  margin: 0;
+  background: #f9f9f9;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.webhook-events {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.webhook-events li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.webhook-events li:before {
+  content: "•";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .api-docs {
+    padding: 1rem;
+  }
+
+  .tab-buttons {
+    flex-wrap: wrap;
+  }
+
+  .tab-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .libraries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .code-block {
+    padding: 0.8rem;
+  }
+
+  .code-block pre {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API文档 - 加密货币支付网关</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/api.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">支付网关</div>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="features.html">功能</a></li>
+                <li><a href="wallet.html">钱包</a></li>
+                <li><a href="api.html">API</a></li>
+                <li><a href="pricing.html">订阅方案</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="api-docs">
+        <section class="api-intro">
+            <h1>API文档</h1>
+            <p class="api-description">我们提供简单易用的RESTful API，帮助您将加密货币支付功能集成到您的应用程序中。</p>
+            
+            <div class="api-credentials">
+                <h2>获取API凭证</h2>
+                <p>在使用API之前，您需要先注册并获取API密钥。</p>
+                <a href="#" class="api-button" id="get-api-key">获取API密钥</a>
+            </div>
+        </section>
+        
+        <section class="api-endpoints">
+            <h2>API端点</h2>
+            <p>所有API请求都应发送到基本URL: <code>https://api.cryptopay.example.com/v1</code></p>
+            
+            <div class="endpoint-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="wallet">钱包API</button>
+                    <button class="tab-button" data-tab="payment">支付API</button>
+                    <button class="tab-button" data-tab="transaction">交易API</button>
+                </div>
+                
+                <div class="tab-content">
+                    <!-- 钱包API -->
+                    <div class="tab-pane active" id="wallet-tab">
+                        <div class="endpoint">
+                            <h3>创建钱包</h3>
+                            <div class="endpoint-details">
+                                <div class="endpoint-info">
+                                    <span class="method post">POST</span>
+                                    <span class="path">/wallets</span>
+                                </div>
+                                <p>创建一个新的托管钱包。</p>
+                                
+                                <h4>请求参数</h4>
+                                <div class="code-block">
+<pre>{
+  "user_id": "用户唯一标识",
+  "currency": ["ETH", "BNB", "USDT", "USDC"],  // 支持的货币类型
+  "callback_url": "https://your-app.com/callback"  // 可选
+}</pre>
+                                </div>
+                                
+                                <h4>响应</h4>
+                                <div class="code-block">
+<pre>{
+  "wallet_id": "w_123456789",
+  "addresses": {
+    "ETH": "0x1234567890abcdef1234567890abcdef12345678",
+    "BNB": "bnb1234567890abcdef1234567890abcdef1234567",
+    "USDT": "0x1234567890abcdef1234567890abcdef12345678",
+    "USDC": "0x1234567890abcdef1234567890abcdef12345678"
+  },
+  "created_at": "2025-02-28T12:00:00Z"
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="endpoint">
+                            <h3>获取钱包余额</h3>
+                            <div class="endpoint-details">
+                                <div class="endpoint-info">
+                                    <span class="method get">GET</span>
+                                    <span class="path">/wallets/{wallet_id}/balance</span>
+                                </div>
+                                <p>获取指定钱包的余额。</p>
+                                
+                                <h4>路径参数</h4>
+                                <ul class="params-list">
+                                    <li><code>wallet_id</code> - 钱包ID</li>
+                                </ul>
+                                
+                                <h4>响应</h4>
+                                <div class="code-block">
+<pre>{
+  "balances": {
+    "ETH": {
+      "available": "0.5",
+      "pending": "0.0",
+      "usd_value": "1500.00"
+    },
+    "BNB": {
+      "available": "2.0",
+      "pending": "0.0",
+      "usd_value": "600.00"
+    },
+    "USDT": {
+      "available": "1000.0",
+      "pending": "0.0",
+      "usd_value": "1000.00"
+    },
+    "USDC": {
+      "available": "500.0",
+      "pending": "0.0",
+      "usd_value": "500.00"
+    }
+  },
+  "total_usd_value": "3600.00"
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 支付API -->
+                    <div class="tab-pane" id="payment-tab">
+                        <div class="endpoint">
+                            <h3>创建支付请求</h3>
+                            <div class="endpoint-details">
+                                <div class="endpoint-info">
+                                    <span class="method post">POST</span>
+                                    <span class="path">/payments</span>
+                                </div>
+                                <p>创建一个新的支付请求。</p>
+                                
+                                <h4>请求参数</h4>
+                                <div class="code-block">
+<pre>{
+  "amount": "100.00",
+  "currency": "USDT",
+  "description": "订单#12345的支付",
+  "callback_url": "https://your-app.com/payment/callback",
+  "success_url": "https://your-app.com/payment/success",
+  "cancel_url": "https://your-app.com/payment/cancel",
+  "metadata": {
+    "order_id": "12345",
+    "customer_id": "cust_987654"
+  },
+  "expires_in": 3600  // 过期时间（秒）
+}</pre>
+                                </div>
+                                
+                                <h4>响应</h4>
+                                <div class="code-block">
+<pre>{
+  "payment_id": "pay_123456789",
+  "status": "pending",
+  "amount": "100.00",
+  "currency": "USDT",
+  "payment_url": "https://pay.cryptopay.example.com/p/123456789",
+  "expires_at": "2025-02-28T13:00:00Z",
+  "created_at": "2025-02-28T12:00:00Z"
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="endpoint">
+                            <h3>获取支付状态</h3>
+                            <div class="endpoint-details">
+                                <div class="endpoint-info">
+                                    <span class="method get">GET</span>
+                                    <span class="path">/payments/{payment_id}</span>
+                                </div>
+                                <p>获取指定支付请求的状态。</p>
+                                
+                                <h4>路径参数</h4>
+                                <ul class="params-list">
+                                    <li><code>payment_id</code> - 支付ID</li>
+                                </ul>
+                                
+                                <h4>响应</h4>
+                                <div class="code-block">
+<pre>{
+  "payment_id": "pay_123456789",
+  "status": "completed",
+  "amount": "100.00",
+  "currency": "USDT",
+  "transaction_id": "tx_987654321",
+  "paid_at": "2025-02-28T12:15:00Z",
+  "created_at": "2025-02-28T12:00:00Z"
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 交易API -->
+                    <div class="tab-pane" id="transaction-tab">
+                        <div class="endpoint">
+                            <h3>获取交易历史</h3>
+                            <div class="endpoint-details">
+                                <div class="endpoint-info">
+                                    <span class="method get">GET</span>
+                                    <span class="path">/wallets/{wallet_id}/transactions</span>
+                                </div>
+                                <p>获取指定钱包的交易历史。</p>
+                                
+                                <h4>路径参数</h4>
+                                <ul class="params-list">
+                                    <li><code>wallet_id</code> - 钱包ID</li>
+                                </ul>
+                                
+                                <h4>查询参数</h4>
+                                <ul class="params-list">
+                                    <li><code>currency</code> - 货币类型（可选）</li>
+                                    <li><code>type</code> - 交易类型：deposit, withdrawal, payment（可选）</li>
+                                    <li><code>start_date</code> - 开始日期（可选）</li>
+                                    <li><code>end_date</code> - 结束日期（可选）</li>
+                                    <li><code>limit</code> - 每页记录数，默认20（可选）</li>
+                                    <li><code>page</code> - 页码，默认1（可选）</li>
+                                </ul>
+                                
+                                <h4>响应</h4>
+                                <div class="code-block">
+<pre>{
+  "transactions": [
+    {
+      "id": "tx_123456789",
+      "type": "deposit",
+      "status": "completed",
+      "currency": "ETH",
+      "amount": "0.5",
+      "fee": "0.001",
+      "blockchain_txid": "0xabcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890",
+      "created_at": "2025-02-28T10:00:00Z",
+      "completed_at": "2025-02-28T10:05:00Z"
+    },
+    {
+      "id": "tx_987654321",
+      "type": "payment",
+      "status": "completed",
+      "currency": "USDT",
+      "amount": "100.00",
+      "fee": "1.00",
+      "blockchain_txid": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "created_at": "2025-02-28T12:00:00Z",
+      "completed_at": "2025-02-28T12:05:00Z"
+    }
+  ],
+  "pagination": {
+    "total": 24,
+    "page": 1,
+    "limit": 20,
+    "pages": 2
+  }
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="api-authentication">
+            <h2>认证</h2>
+            <p>所有API请求都需要使用API密钥进行认证。您可以通过以下两种方式之一提供API密钥：</p>
+            
+            <h3>HTTP头认证（推荐）</h3>
+            <div class="code-block">
+<pre>Authorization: Bearer YOUR_API_KEY</pre>
+            </div>
+            
+            <h3>查询参数认证</h3>
+            <div class="code-block">
+<pre>https://api.cryptopay.example.com/v1/wallets?api_key=YOUR_API_KEY</pre>
+            </div>
+        </section>
+        
+        <section class="api-errors">
+            <h2>错误处理</h2>
+            <p>当API请求失败时，您将收到相应的HTTP状态码和JSON格式的错误响应。</p>
+            
+            <div class="code-block">
+<pre>{
+  "error": {
+    "code": "invalid_request",
+    "message": "请求参数无效",
+    "details": {
+      "amount": "金额必须大于0"
+    }
+  }
+}</pre>
+            </div>
+            
+            <h3>常见错误代码</h3>
+            <table class="error-codes">
+                <thead>
+                    <tr>
+                        <th>HTTP状态码</th>
+                        <th>错误代码</th>
+                        <th>描述</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>400</td>
+                        <td>invalid_request</td>
+                        <td>请求参数无效</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>unauthorized</td>
+                        <td>API密钥无效或已过期</td>
+                    </tr>
+                    <tr>
+                        <td>403</td>
+                        <td>forbidden</td>
+                        <td>没有权限执行此操作</td>
+                    </tr>
+                    <tr>
+                        <td>404</td>
+                        <td>not_found</td>
+                        <td>请求的资源不存在</td>
+                    </tr>
+                    <tr>
+                        <td>429</td>
+                        <td>rate_limit_exceeded</td>
+                        <td>超出API请求频率限制</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>server_error</td>
+                        <td>服务器内部错误</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section class="api-libraries">
+            <h2>客户端库</h2>
+            <p>为了简化API集成，我们提供了多种编程语言的客户端库。</p>
+            
+            <div class="libraries-grid">
+                <div class="library-card">
+                    <h3>JavaScript</h3>
+                    <div class="code-block">
+<pre>// 安装
+npm install cryptopay-js-sdk
+
+// 使用
+const CryptoPay = require('cryptopay-js-sdk');
+const client = new CryptoPay('YOUR_API_KEY');
+
+// 创建支付请求
+client.createPayment({
+  amount: '100.00',
+  currency: 'USDT',
+  description: '订单#12345的支付'
+})
+.then(payment => console.log(payment))
+.catch(error => console.error(error));</pre>
+                    </div>
+                </div>
+                
+                <div class="library-card">
+                    <h3>Python</h3>
+                    <div class="code-block">
+<pre># 安装
+pip install cryptopay-python
+
+# 使用
+from cryptopay import CryptoPay
+
+client = CryptoPay('YOUR_API_KEY')
+
+# 创建支付请求
+payment = client.create_payment(
+    amount='100.00',
+    currency='USDT',
+    description='订单#12345的支付'
+)
+print(payment)</pre>
+                    </div>
+                </div>
+                
+                <div class="library-card">
+                    <h3>PHP</h3>
+                    <div class="code-block">
+<pre>// 安装
+composer require cryptopay/cryptopay-php
+
+// 使用
+require 'vendor/autoload.php';
+
+$client = new \CryptoPay\Client('YOUR_API_KEY');
+
+// 创建支付请求
+$payment = $client->payments->create([
+    'amount' => '100.00',
+    'currency' => 'USDT',
+    'description' => '订单#12345的支付'
+]);
+print_r($payment);</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="api-webhooks">
+            <h2>Webhooks</h2>
+            <p>通过Webhooks，您可以实时接收支付和交易状态的更新。</p>
+            
+            <h3>配置Webhook</h3>
+            <p>在创建钱包或支付请求时，您可以提供一个<code>callback_url</code>参数，我们将向该URL发送事件通知。</p>
+            
+            <h3>Webhook事件类型</h3>
+            <ul class="webhook-events">
+                <li><code>payment.created</code> - 创建了新的支付请求</li>
+                <li><code>payment.completed</code> - 支付已完成</li>
+                <li><code>payment.failed</code> - 支付失败</li>
+                <li><code>payment.expired</code> - 支付请求已过期</li>
+                <li><code>transaction.created</code> - 创建了新的交易</li>
+                <li><code>transaction.completed</code> - 交易已完成</li>
+                <li><code>transaction.failed</code> - 交易失败</li>
+            </ul>
+            
+            <h3>Webhook请求格式</h3>
+            <div class="code-block">
+<pre>{
+  "event": "payment.completed",
+  "data": {
+    "payment_id": "pay_123456789",
+    "status": "completed",
+    "amount": "100.00",
+    "currency": "USDT",
+    "transaction_id": "tx_987654321",
+    "paid_at": "2025-02-28T12:15:00Z",
+    "created_at": "2025-02-28T12:00:00Z"
+  }
+}</pre>
+            </div>
+            
+            <h3>验证Webhook请求</h3>
+            <p>为了确保Webhook请求的真实性，我们会在每个请求中包含一个签名头：</p>
+            <div class="code-block">
+<pre>X-CryptoPay-Signature: t=1614513600,v1=5257a869e7ecebeda32affa62cdca3fa51cad7e77a0e56ff536d0ce8e108d8bd</pre>
+            </div>
+            
+            <p>您可以使用以下代码验证签名：</p>
+            <div class="code-block">
+<pre>// JavaScript示例
+const crypto = require('crypto');
+
+function verifyWebhookSignature(payload, signature, secret) {
+  const [timestamp, signatureHash] = signature.split(',');
+  const [, timeValue] = timestamp.split('=');
+  const [, hashValue] = signatureHash.split('=');
+  
+  const expectedSignature = crypto
+    .createHmac('sha256', secret)
+    .update(`${timeValue}.${payload}`)
+    .digest('hex');
+  
+  return hashValue === expectedSignature;
+}</pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 加密货币支付网关</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>
