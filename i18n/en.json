@@ -1,0 +1,547 @@
+{
+  "global": {
+    "siteName": "Payment Gateway",
+    "nav": {
+      "home": "Home",
+      "features": "Features",
+      "wallet": "Wallet",
+      "api": "API",
+      "pricing": "Pricing",
+      "about": "About Us"
+    },
+    "footer": {
+      "copyright": "© 2025 Cryptocurrency Payment Gateway"
+    },
+    "language": {
+      "zh": "中文",
+      "en": "English"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Cryptocurrency Micro-Payment Solution",
+      "subtitle": "Supporting ETH, BNB, USDT, USDC, with payment limit under $2,000",
+      "cta": "Learn More"
+    },
+    "features": {
+      "title": "Main Features",
+      "eth": {
+        "title": "Ethereum Payment",
+        "description": "Support direct ETH payment"
+      },
+      "bnb": {
+        "title": "BNB Payment",
+        "description": "Support direct BNB payment"
+      },
+      "usdt": {
+        "title": "USDT Payment",
+        "description": "Support USDT stablecoin payment"
+      },
+      "usdc": {
+        "title": "USDC Payment",
+        "description": "Support USDC stablecoin payment"
+      }
+    }
+  },
+  "features": {
+    "title": "Supported Features",
+    "cryptoSection": {
+      "title": "Supported Cryptocurrencies",
+      "eth": {
+        "title": "Ethereum (ETH)",
+        "features": [
+          "Support for ERC-20 standard",
+          "Real-time exchange rate conversion",
+          "Single transaction limit: $2,000"
+        ]
+      },
+      "bnb": {
+        "title": "Binance Coin (BNB)",
+        "features": [
+          "Support for BEP-20 standard",
+          "Real-time exchange rate conversion",
+          "Single transaction limit: $2,000"
+        ]
+      },
+      "usdt": {
+        "title": "USDT",
+        "features": [
+          "Support for ERC-20 and TRC-20",
+          "1:1 pegged to USD",
+          "Single transaction limit: $2,000"
+        ]
+      },
+      "usdc": {
+        "title": "USDC",
+        "features": [
+          "Support for ERC-20 standard",
+          "1:1 pegged to USD",
+          "Single transaction limit: $2,000"
+        ]
+      }
+    },
+    "paymentLimits": {
+      "title": "Payment Limits",
+      "limits": [
+        "Single transaction limit: $2,000",
+        "Daily transaction limit: $10,000",
+        "Monthly transaction limit: $50,000"
+      ]
+    }
+  },
+  "wallet": {
+    "title": "Cryptocurrency Wallet",
+    "intro": "We provide secure and convenient cryptocurrency wallet solutions, supporting multiple cryptocurrencies including ETH, BNB, USDT, and USDC.",
+    "hostedWallet": {
+      "title": "Hosted Wallet",
+      "description": "Our hosted wallet service provides a faster and more convenient payment experience.",
+      "features": [
+        "No additional software installation required",
+        "Fast payment confirmation",
+        "Multiple security guarantees",
+        "Real-time balance updates",
+        "Support for multiple cryptocurrencies"
+      ],
+      "button": "Create Hosted Wallet"
+    },
+    "externalWallet": {
+      "title": "Connect External Wallet",
+      "description": "You can also connect your own external wallet for payments.",
+      "features": [
+        "Support for MetaMask",
+        "Support for Trust Wallet",
+        "Support for Binance Wallet",
+        "Complete control of your assets",
+        "No custodial service needed"
+      ],
+      "button": "Connect External Wallet"
+    },
+    "security": {
+      "title": "Security Guarantees",
+      "features": [
+        {
+          "title": "Multi-signature",
+          "description": "All transactions require multi-signature verification to ensure fund security."
+        },
+        {
+          "title": "Cold Storage",
+          "description": "Most funds are stored in offline cold wallets to prevent hacking attacks."
+        },
+        {
+          "title": "Encryption Protection",
+          "description": "All data transmissions use advanced encryption technology to protect your privacy."
+        },
+        {
+          "title": "Regular Audits",
+          "description": "The system undergoes regular security audits to promptly identify and fix potential risks."
+        }
+      ]
+    },
+    "demo": {
+      "title": "Wallet Demo",
+      "walletHeader": "Hosted Wallet Demo",
+      "balance": "Balance: 1500 USDT",
+      "assets": {
+        "eth": {
+          "name": "Ethereum (ETH)",
+          "balance": "0.5 ETH"
+        },
+        "bnb": {
+          "name": "Binance Coin (BNB)",
+          "balance": "2.0 BNB"
+        },
+        "usdt": {
+          "name": "USDT",
+          "balance": "1000 USDT"
+        },
+        "usdc": {
+          "name": "USDC",
+          "balance": "500 USDC"
+        }
+      },
+      "actions": {
+        "deposit": "Deposit",
+        "withdraw": "Withdraw",
+        "pay": "Pay"
+      },
+      "note": "Note: This is just a demo interface and does not involve actual funds."
+    }
+  },
+  "api": {
+    "title": "API Documentation",
+    "description": "We provide a simple and easy-to-use RESTful API to help you integrate cryptocurrency payment functionality into your applications.",
+    "credentials": {
+      "title": "Get API Credentials",
+      "description": "Before using the API, you need to register and obtain an API key.",
+      "button": "Get API Key"
+    },
+    "endpoints": {
+      "title": "API Endpoints",
+      "baseUrl": "All API requests should be sent to the base URL: ",
+      "tabs": {
+        "wallet": "Wallet API",
+        "payment": "Payment API",
+        "transaction": "Transaction API"
+      }
+    },
+    "authentication": {
+      "title": "Authentication",
+      "description": "All API requests require authentication using an API key. You can provide the API key in one of the following two ways:",
+      "header": "HTTP Header Authentication (Recommended)",
+      "query": "Query Parameter Authentication"
+    },
+    "errors": {
+      "title": "Error Handling",
+      "description": "When an API request fails, you will receive a corresponding HTTP status code and a JSON-formatted error response.",
+      "codes": {
+        "title": "Common Error Codes",
+        "400": "Invalid request parameters",
+        "401": "API key is invalid or expired",
+        "403": "No permission to perform this operation",
+        "404": "Requested resource does not exist",
+        "429": "API request frequency limit exceeded",
+        "500": "Server internal error"
+      }
+    },
+    "libraries": {
+      "title": "Client Libraries",
+      "description": "To simplify API integration, we provide client libraries in various programming languages."
+    },
+    "webhooks": {
+      "title": "Webhooks",
+      "description": "Through Webhooks, you can receive real-time updates on payment and transaction statuses."
+    }
+  },
+  "pricing": {
+    "title": "Choose a Plan That Fits Your Needs",
+    "description": "We offer a variety of flexible subscription plans to meet the needs of businesses of different sizes.",
+    "billing": {
+      "monthly": "Pay Monthly",
+      "annual": "Pay Annually",
+      "discount": "Save 20%"
+    },
+    "plans": {
+      "basic": {
+        "title": "Basic",
+        "price": {
+          "monthly": "$49",
+          "annual": "$490"
+        },
+        "period": "/month",
+        "description": "Suitable for startups and small merchants",
+        "features": [
+          "Support for ETH, BNB, USDT, USDC",
+          "Monthly transaction limit: $50,000",
+          "Transaction fee: 2%",
+          "Basic API access",
+          "Email support",
+          "Basic security guarantees"
+        ],
+        "button": "Choose Plan"
+      },
+      "pro": {
+        "title": "Professional",
+        "price": {
+          "monthly": "$129",
+          "annual": "$1,290"
+        },
+        "period": "/month",
+        "description": "Suitable for medium-sized businesses and growing merchants",
+        "badge": "Most Popular",
+        "features": [
+          "Support for ETH, BNB, USDT, USDC",
+          "Monthly transaction limit: $200,000",
+          "Transaction fee: 1.5%",
+          "Full API access",
+          "Priority email support",
+          "Advanced security guarantees",
+          "Customized settlement",
+          "Basic data analytics"
+        ],
+        "button": "Choose Plan"
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "price": {
+          "monthly": "$299",
+          "annual": "$2,990"
+        },
+        "period": "/month",
+        "description": "Suitable for large enterprises and high-volume merchants",
+        "features": [
+          "Support for ETH, BNB, USDT, USDC",
+          "Monthly transaction limit: $1,000,000",
+          "Transaction fee: 1%",
+          "Full API access",
+          "24/7 dedicated customer service",
+          "Enterprise-level security guarantees",
+          "Customized settlement",
+          "Advanced data analytics",
+          "Multi-account management",
+          "Dedicated technical support"
+        ],
+        "button": "Choose Plan"
+      }
+    },
+    "custom": {
+      "title": "Need a Custom Plan?",
+      "description": "If you have special requirements or higher transaction volumes, we can provide you with a customized solution.",
+      "button": "Contact Sales Team"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "How do I choose the right plan for me?",
+          "answer": "You can choose a suitable plan based on your monthly transaction volume, required features, and budget. If you're unsure, you can start with the Basic plan and upgrade to a higher-tier plan later."
+        },
+        {
+          "question": "Can I change my plan at any time?",
+          "answer": "Yes, you can upgrade or downgrade your plan at any time. When upgrading, we will calculate the fee difference for the remaining time proportionally; when downgrading, the new price will take effect in the next billing cycle."
+        },
+        {
+          "question": "How are transaction fees charged?",
+          "answer": "Transaction fees are deducted from the transaction amount when each transaction is completed. For example, if you process a $1,000 transaction using the Professional plan (1.5% fee), you will receive $985, and we will charge $15 as a fee."
+        },
+        {
+          "question": "Is there a free trial period?",
+          "answer": "Yes, we offer a 14-day free trial period, allowing you to experience our service without paying. During the trial period, you can use all the features of the Professional plan, but with a transaction limit of $10,000."
+        },
+        {
+          "question": "How do you handle situations where transaction volume exceeds the limit?",
+          "answer": "If your transaction volume approaches or exceeds the limit of your current plan, the system will automatically notify you. You can choose to upgrade to a higher-tier plan or contact our sales team for a custom plan. If you don't upgrade, transactions exceeding the limit will be suspended."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "tagline": "Bridging Traditional Commerce and Crypto Economy",
+    "description": "We are a technology company focused on cryptocurrency payment solutions, dedicated to providing secure, convenient, and efficient cryptocurrency payment services for businesses and individuals.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Through innovative technology and quality service, we aim to lower the barriers to cryptocurrency payments, promote the application of cryptocurrencies in daily commercial activities, and contribute to the development of the global digital economy."
+    },
+    "values": {
+      "title": "Core Values",
+      "items": [
+        {
+          "icon": "🔒",
+          "title": "Security and Reliability",
+          "description": "We prioritize security, employing multiple encryption and security measures to protect user assets and data."
+        },
+        {
+          "icon": "🚀",
+          "title": "Innovation-Driven",
+          "description": "Continuously exploring and applying new technologies to provide better product and service experiences for users."
+        },
+        {
+          "icon": "👥",
+          "title": "User-Centric",
+          "description": "Focusing on user needs to provide thoughtful services and solutions."
+        },
+        {
+          "icon": "🌐",
+          "title": "Open and Inclusive",
+          "description": "Embracing an open attitude and working with industry partners to promote the development and application of blockchain technology."
+        }
+      ]
+    },
+    "story": {
+      "title": "Our Story",
+      "timeline": [
+        {
+          "year": "2023",
+          "title": "Founding",
+          "description": "The company was founded by a group of technical experts and financial professionals passionate about blockchain technology, aiming to bridge the gap between traditional payments and cryptocurrencies."
+        },
+        {
+          "year": "2024",
+          "title": "Product Launch",
+          "description": "Successfully launched the first version of the cryptocurrency payment gateway, supporting ETH and USDT payments, gaining recognition from startups and small merchants."
+        },
+        {
+          "year": "2025",
+          "title": "Rapid Growth",
+          "description": "Expanded the range of supported cryptocurrencies, optimized user experience, and achieved rapid growth in customer numbers and transaction volume."
+        },
+        {
+          "year": "Future",
+          "title": "Continuous Innovation",
+          "description": "We will continue to explore blockchain technology applications, expand our product line, and provide more diverse crypto payment solutions for global users."
+        }
+      ]
+    },
+    "team": {
+      "title": "Core Team",
+      "members": [
+        {
+          "initials": "ZL",
+          "name": "Zhang Li",
+          "title": "Founder & CEO",
+          "bio": "Blockchain technology expert with 10 years of internet finance experience, formerly the technical director of a well-known payment company."
+        },
+        {
+          "initials": "WM",
+          "name": "Wang Min",
+          "title": "Co-founder & CTO",
+          "bio": "Full-stack developer and early blockchain participant who has led the development of multiple large-scale blockchain projects."
+        },
+        {
+          "initials": "LJ",
+          "name": "Li Jia",
+          "title": "Product Director",
+          "bio": "Rich experience in product design and user experience, focused on creating simple and easy-to-use crypto payment products."
+        },
+        {
+          "initials": "CY",
+          "name": "Chen Yang",
+          "title": "Security Director",
+          "bio": "Network security expert with years of experience in financial security and blockchain security, ensuring the secure and stable operation of the platform."
+        }
+      ]
+    },
+    "partners": {
+      "title": "Partners"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "address": {
+        "title": "Address",
+        "value": "88 Keyuan Road, Zhangjiang Hi-Tech Park, Pudong New Area, Shanghai, China"
+      },
+      "phone": {
+        "title": "Phone",
+        "value": "+86 21 5555 8888"
+      },
+      "email": {
+        "title": "Email",
+        "value": "info@cryptopay.example.com"
+      },
+      "form": {
+        "title": "Leave Us a Message",
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send Message"
+      }
+    }
+  },
+  "modals": {
+    "wallet": {
+      "create": {
+        "title": "Create Hosted Wallet",
+        "message": "Please fill in the following information to create your hosted wallet",
+        "fields": {
+          "email": "Email",
+          "password": "Password",
+          "confirmPassword": "Confirm Password"
+        },
+        "submit": "Confirm"
+      },
+      "connect": {
+        "title": "Select Wallet",
+        "wallets": {
+          "metamask": "MetaMask",
+          "trustWallet": "Trust Wallet",
+          "binanceWallet": "Binance Wallet"
+        }
+      },
+      "deposit": {
+        "title": "Deposit Demo",
+        "message": "Please select deposit method and amount",
+        "fields": {
+          "currency": "Select Currency",
+          "amount": "Deposit Amount"
+        },
+        "submit": "Confirm"
+      },
+      "withdraw": {
+        "title": "Withdraw Demo",
+        "message": "Please fill in withdrawal information",
+        "fields": {
+          "currency": "Select Currency",
+          "amount": "Withdrawal Amount",
+          "address": "Wallet Address"
+        },
+        "submit": "Confirm"
+      },
+      "pay": {
+        "title": "Payment Demo",
+        "message": "Please fill in payment information",
+        "fields": {
+          "currency": "Select Currency",
+          "amount": "Payment Amount",
+          "address": "Recipient Address",
+          "memo": "Memo"
+        },
+        "submit": "Confirm"
+      },
+      "success": {
+        "title": "Operation Successful",
+        "message": "Demo operation completed"
+      }
+    },
+    "api": {
+      "key": {
+        "title": "Get API Key",
+        "fields": {
+          "appName": "Application Name",
+          "appDescription": "Application Description",
+          "callbackUrl": "Callback URL"
+        },
+        "submit": "Generate API Key",
+        "result": {
+          "title": "Your API Key",
+          "copy": "Copy",
+          "copied": "Copied",
+          "warning": "Please save this API key, it will only be shown once!"
+        }
+      }
+    },
+    "pricing": {
+      "plan": {
+        "title": "Confirm {plan} Plan Selection",
+        "message": "You are about to subscribe to the {plan} plan. Please fill in the following information to complete your subscription.",
+        "fields": {
+          "companyName": "Company Name",
+          "contactName": "Contact Name",
+          "email": "Email",
+          "phone": "Phone"
+        },
+        "payment": {
+          "title": "Payment Method",
+          "methods": {
+            "crypto": "Cryptocurrency Payment",
+            "bank": "Bank Transfer",
+            "alipay": "Alipay",
+            "wechat": "WeChat Pay"
+          }
+        },
+        "submit": "Confirm Subscription",
+        "success": {
+          "title": "Subscription Successful!",
+          "message": "Thank you for subscribing to the {plan} plan. We have sent a confirmation email to your inbox, please check."
+        }
+      },
+      "contact": {
+        "title": "Contact Sales Team",
+        "message": "Please fill in the following information, and our sales team will contact you as soon as possible.",
+        "fields": {
+          "companyName": "Company Name",
+          "contactName": "Contact Name",
+          "email": "Email",
+          "phone": "Phone",
+          "volume": "Estimated Monthly Transaction Volume",
+          "requirements": "Requirements Description"
+        },
+        "submit": "Submit",
+        "success": {
+          "title": "Submission Successful!",
+          "message": "Thank you for your inquiry. Our sales team will contact you within 24 hours."
+        }
+      }
+    }
+  }
+}

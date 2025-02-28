@@ -1,0 +1,531 @@
+{
+  "global": {
+    "siteName": "支付网关",
+    "nav": {
+      "home": "首页",
+      "features": "功能",
+      "wallet": "钱包",
+      "api": "API",
+      "pricing": "订阅方案",
+      "about": "关于我们"
+    },
+    "footer": {
+      "copyright": "© 2025 加密货币支付网关"
+    },
+    "language": {
+      "zh": "中文",
+      "en": "English"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "加密货币小额支付解决方案",
+      "subtitle": "支持ETH、BNB、USDT、USDC，支付限额2000美元以内",
+      "cta": "了解更多"
+    },
+    "features": {
+      "title": "主要功能",
+      "eth": {
+        "title": "以太坊支付",
+        "description": "支持ETH直接支付"
+      },
+      "bnb": {
+        "title": "币安币支付",
+        "description": "支持BNB直接支付"
+      },
+      "usdt": {
+        "title": "USDT支付",
+        "description": "支持USDT稳定币支付"
+      },
+      "usdc": {
+        "title": "USDC支付",
+        "description": "支持USDC稳定币支付"
+      }
+    }
+  },
+  "features": {
+    "title": "支持的功能",
+    "cryptoSection": {
+      "title": "支持的加密货币",
+      "eth": {
+        "title": "以太坊 (ETH)",
+        "features": ["支持ERC-20标准", "实时汇率转换", "单笔限额：2000美元"]
+      },
+      "bnb": {
+        "title": "币安币 (BNB)",
+        "features": ["支持BEP-20标准", "实时汇率转换", "单笔限额：2000美元"]
+      },
+      "usdt": {
+        "title": "USDT",
+        "features": ["支持ERC-20和TRC-20", "1:1锚定美元", "单笔限额：2000美元"]
+      },
+      "usdc": {
+        "title": "USDC",
+        "features": ["支持ERC-20标准", "1:1锚定美元", "单笔限额：2000美元"]
+      }
+    },
+    "paymentLimits": {
+      "title": "支付限额",
+      "limits": [
+        "单笔交易限额：2000美元",
+        "每日交易限额：10000美元",
+        "每月交易限额：50000美元"
+      ]
+    }
+  },
+  "wallet": {
+    "title": "加密货币钱包",
+    "intro": "我们提供安全、便捷的加密货币钱包解决方案，支持ETH、BNB、USDT和USDC等多种加密货币。",
+    "hostedWallet": {
+      "title": "托管钱包",
+      "description": "我们的托管钱包服务为您提供更快捷、更便利的支付体验。",
+      "features": [
+        "无需安装额外软件",
+        "快速支付确认",
+        "多重安全保障",
+        "余额实时更新",
+        "支持多种加密货币"
+      ],
+      "button": "创建托管钱包"
+    },
+    "externalWallet": {
+      "title": "连接外部钱包",
+      "description": "您也可以连接自己的外部钱包进行支付。",
+      "features": [
+        "支持MetaMask",
+        "支持Trust Wallet",
+        "支持Binance Wallet",
+        "完全控制您的资产",
+        "无需托管服务"
+      ],
+      "button": "连接外部钱包"
+    },
+    "security": {
+      "title": "安全保障",
+      "features": [
+        {
+          "title": "多重签名",
+          "description": "所有交易都需要多重签名验证，确保资金安全。"
+        },
+        {
+          "title": "冷存储",
+          "description": "大部分资金存储在离线冷钱包中，防止黑客攻击。"
+        },
+        {
+          "title": "加密保护",
+          "description": "所有数据传输采用高级加密技术，保护您的隐私。"
+        },
+        {
+          "title": "定期审计",
+          "description": "系统定期进行安全审计，及时发现并修复潜在风险。"
+        }
+      ]
+    },
+    "demo": {
+      "title": "钱包演示",
+      "walletHeader": "托管钱包演示",
+      "balance": "余额: 1500 USDT",
+      "assets": {
+        "eth": {
+          "name": "以太坊 (ETH)",
+          "balance": "0.5 ETH"
+        },
+        "bnb": {
+          "name": "币安币 (BNB)",
+          "balance": "2.0 BNB"
+        },
+        "usdt": {
+          "name": "USDT",
+          "balance": "1000 USDT"
+        },
+        "usdc": {
+          "name": "USDC",
+          "balance": "500 USDC"
+        }
+      },
+      "actions": {
+        "deposit": "充值",
+        "withdraw": "提现",
+        "pay": "支付"
+      },
+      "note": "注意：这只是一个演示界面，不涉及实际资金。"
+    }
+  },
+  "api": {
+    "title": "API文档",
+    "description": "我们提供简单易用的RESTful API，帮助您将加密货币支付功能集成到您的应用程序中。",
+    "credentials": {
+      "title": "获取API凭证",
+      "description": "在使用API之前，您需要先注册并获取API密钥。",
+      "button": "获取API密钥"
+    },
+    "endpoints": {
+      "title": "API端点",
+      "baseUrl": "所有API请求都应发送到基本URL: ",
+      "tabs": {
+        "wallet": "钱包API",
+        "payment": "支付API",
+        "transaction": "交易API"
+      }
+    },
+    "authentication": {
+      "title": "认证",
+      "description": "所有API请求都需要使用API密钥进行认证。您可以通过以下两种方式之一提供API密钥：",
+      "header": "HTTP头认证（推荐）",
+      "query": "查询参数认证"
+    },
+    "errors": {
+      "title": "错误处理",
+      "description": "当API请求失败时，您将收到相应的HTTP状态码和JSON格式的错误响应。",
+      "codes": {
+        "title": "常见错误代码",
+        "400": "请求参数无效",
+        "401": "API密钥无效或已过期",
+        "403": "没有权限执行此操作",
+        "404": "请求的资源不存在",
+        "429": "超出API请求频率限制",
+        "500": "服务器内部错误"
+      }
+    },
+    "libraries": {
+      "title": "客户端库",
+      "description": "为了简化API集成，我们提供了多种编程语言的客户端库。"
+    },
+    "webhooks": {
+      "title": "Webhooks",
+      "description": "通过Webhooks，您可以实时接收支付和交易状态的更新。"
+    }
+  },
+  "pricing": {
+    "title": "选择适合您的方案",
+    "description": "我们提供多种灵活的订阅方案，满足不同规模企业的需求。",
+    "billing": {
+      "monthly": "按月付费",
+      "annual": "按年付费",
+      "discount": "省20%"
+    },
+    "plans": {
+      "basic": {
+        "title": "基础版",
+        "price": {
+          "monthly": "¥299",
+          "annual": "¥2,990"
+        },
+        "period": "/月",
+        "description": "适合初创企业和小型商户",
+        "features": [
+          "支持ETH、BNB、USDT、USDC",
+          "每月交易额限制：¥50,000",
+          "交易手续费：2%",
+          "基础API访问",
+          "邮件支持",
+          "基础安全保障"
+        ],
+        "button": "选择方案"
+      },
+      "pro": {
+        "title": "专业版",
+        "price": {
+          "monthly": "¥799",
+          "annual": "¥7,990"
+        },
+        "period": "/月",
+        "description": "适合中型企业和成长中的商户",
+        "badge": "最受欢迎",
+        "features": [
+          "支持ETH、BNB、USDT、USDC",
+          "每月交易额限制：¥200,000",
+          "交易手续费：1.5%",
+          "完整API访问",
+          "优先邮件支持",
+          "高级安全保障",
+          "定制化结算",
+          "基础数据分析"
+        ],
+        "button": "选择方案"
+      },
+      "enterprise": {
+        "title": "企业版",
+        "price": {
+          "monthly": "¥1,999",
+          "annual": "¥19,990"
+        },
+        "period": "/月",
+        "description": "适合大型企业和高交易量商户",
+        "features": [
+          "支持ETH、BNB、USDT、USDC",
+          "每月交易额限制：¥1,000,000",
+          "交易手续费：1%",
+          "完整API访问",
+          "24/7专属客服",
+          "企业级安全保障",
+          "定制化结算",
+          "高级数据分析",
+          "多账户管理",
+          "专属技术支持"
+        ],
+        "button": "选择方案"
+      }
+    },
+    "custom": {
+      "title": "需要定制方案？",
+      "description": "如果您有特殊需求或更高的交易量，我们可以为您提供定制化的解决方案。",
+      "button": "联系销售团队"
+    },
+    "faq": {
+      "title": "常见问题",
+      "questions": [
+        {
+          "question": "如何选择适合我的方案？",
+          "answer": "您可以根据您的月交易量、所需功能和预算来选择合适的方案。如果您不确定，可以先选择基础版进行尝试，之后随时可以升级到更高级的方案。"
+        },
+        {
+          "question": "我可以随时更换方案吗？",
+          "answer": "是的，您可以随时升级或降级您的方案。升级时，我们会按比例计算剩余时间的费用差额；降级时，新的价格将在下一个计费周期生效。"
+        },
+        {
+          "question": "交易手续费是如何收取的？",
+          "answer": "交易手续费是在每笔交易完成时从交易金额中扣除的。例如，如果您使用专业版（手续费1.5%）处理一笔1000元的交易，那么您将收到985元，我们收取15元作为手续费。"
+        },
+        {
+          "question": "是否有免费试用期？",
+          "answer": "是的，我们提供14天的免费试用期，让您可以在不付费的情况下体验我们的服务。试用期间，您可以使用专业版的所有功能，但交易额限制为¥10,000。"
+        },
+        {
+          "question": "如何处理超出交易额限制的情况？",
+          "answer": "如果您的交易额接近或超出当前方案的限制，系统会自动通知您。您可以选择升级到更高级的方案，或者联系我们的销售团队获取定制方案。如果不升级，超出限制的交易将被暂停处理。"
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "关于我们",
+    "tagline": "连接传统商业与加密经济的桥梁",
+    "description": "我们是一家专注于加密货币支付解决方案的科技公司，致力于为企业和个人提供安全、便捷、高效的加密货币支付服务。",
+    "mission": {
+      "title": "我们的使命",
+      "description": "通过创新的技术和优质的服务，降低加密货币支付的门槛，推动加密货币在日常商业活动中的应用，为全球数字经济的发展贡献力量。"
+    },
+    "values": {
+      "title": "核心价值观",
+      "items": [
+        {
+          "icon": "🔒",
+          "title": "安全可靠",
+          "description": "我们将安全放在首位，采用多重加密和安全措施保护用户资产和数据。"
+        },
+        {
+          "icon": "🚀",
+          "title": "创新驱动",
+          "description": "不断探索和应用新技术，为用户提供更好的产品和服务体验。"
+        },
+        {
+          "icon": "👥",
+          "title": "用户至上",
+          "description": "以用户需求为中心，提供贴心的服务和解决方案。"
+        },
+        {
+          "icon": "🌐",
+          "title": "开放包容",
+          "description": "拥抱开放的态度，与行业伙伴共同推动区块链技术的发展和应用。"
+        }
+      ]
+    },
+    "story": {
+      "title": "我们的故事",
+      "timeline": [
+        {
+          "year": "2023年",
+          "title": "创立之初",
+          "description": "公司由一群对区块链技术充满热情的技术专家和金融专业人士共同创立，旨在解决传统支付与加密货币之间的鸿沟。"
+        },
+        {
+          "year": "2024年",
+          "title": "产品发布",
+          "description": "成功推出首个版本的加密货币支付网关，支持ETH和USDT支付，获得了初创企业和小型商户的认可。"
+        },
+        {
+          "year": "2025年",
+          "title": "快速发展",
+          "description": "扩展支持的加密货币种类，优化用户体验，客户数量和交易量实现快速增长。"
+        },
+        {
+          "year": "未来",
+          "title": "持续创新",
+          "description": "我们将继续探索区块链技术的应用，拓展产品线，为全球用户提供更多元化的加密支付解决方案。"
+        }
+      ]
+    },
+    "team": {
+      "title": "核心团队",
+      "members": [
+        {
+          "initials": "ZL",
+          "name": "张力",
+          "title": "创始人 & CEO",
+          "bio": "区块链技术专家，拥有10年互联网金融经验，曾任某知名支付公司技术总监。"
+        },
+        {
+          "initials": "WM",
+          "name": "王敏",
+          "title": "联合创始人 & CTO",
+          "bio": "全栈开发工程师，区块链早期参与者，曾主导多个大型区块链项目的开发。"
+        },
+        {
+          "initials": "LJ",
+          "name": "李佳",
+          "title": "产品总监",
+          "bio": "拥有丰富的产品设计和用户体验经验，专注于打造简单易用的加密支付产品。"
+        },
+        {
+          "initials": "CY",
+          "name": "陈阳",
+          "title": "安全总监",
+          "bio": "网络安全专家，拥有多年金融安全和区块链安全经验，确保平台的安全稳定运行。"
+        }
+      ]
+    },
+    "partners": {
+      "title": "合作伙伴"
+    },
+    "contact": {
+      "title": "联系我们",
+      "address": {
+        "title": "地址",
+        "value": "中国上海市浦东新区张江高科技园区科苑路88号"
+      },
+      "phone": {
+        "title": "电话",
+        "value": "+86 21 5555 8888"
+      },
+      "email": {
+        "title": "邮箱",
+        "value": "info@cryptopay.example.com"
+      },
+      "form": {
+        "title": "给我们留言",
+        "name": "姓名",
+        "email": "邮箱",
+        "subject": "主题",
+        "message": "留言内容",
+        "submit": "发送留言"
+      }
+    }
+  },
+  "modals": {
+    "wallet": {
+      "create": {
+        "title": "托管钱包创建",
+        "message": "请填写以下信息创建您的托管钱包",
+        "fields": {
+          "email": "电子邮箱",
+          "password": "密码",
+          "confirmPassword": "确认密码"
+        },
+        "submit": "确认"
+      },
+      "connect": {
+        "title": "选择钱包",
+        "wallets": {
+          "metamask": "MetaMask",
+          "trustWallet": "Trust Wallet",
+          "binanceWallet": "Binance Wallet"
+        }
+      },
+      "deposit": {
+        "title": "充值演示",
+        "message": "请选择充值方式和金额",
+        "fields": {
+          "currency": "选择币种",
+          "amount": "充值金额"
+        },
+        "submit": "确认"
+      },
+      "withdraw": {
+        "title": "提现演示",
+        "message": "请填写提现信息",
+        "fields": {
+          "currency": "选择币种",
+          "amount": "提现金额",
+          "address": "钱包地址"
+        },
+        "submit": "确认"
+      },
+      "pay": {
+        "title": "支付演示",
+        "message": "请填写支付信息",
+        "fields": {
+          "currency": "选择币种",
+          "amount": "支付金额",
+          "address": "收款地址",
+          "memo": "备注"
+        },
+        "submit": "确认"
+      },
+      "success": {
+        "title": "操作成功",
+        "message": "演示操作已完成"
+      }
+    },
+    "api": {
+      "key": {
+        "title": "获取API密钥",
+        "fields": {
+          "appName": "应用名称",
+          "appDescription": "应用描述",
+          "callbackUrl": "回调URL"
+        },
+        "submit": "生成API密钥",
+        "result": {
+          "title": "您的API密钥",
+          "copy": "复制",
+          "copied": "已复制",
+          "warning": "请保存此API密钥，它只会显示一次！"
+        }
+      }
+    },
+    "pricing": {
+      "plan": {
+        "title": "确认选择{plan}方案",
+        "message": "您即将订阅{plan}方案。请填写以下信息完成订阅。",
+        "fields": {
+          "companyName": "公司名称",
+          "contactName": "联系人",
+          "email": "电子邮箱",
+          "phone": "电话"
+        },
+        "payment": {
+          "title": "付款方式",
+          "methods": {
+            "crypto": "加密货币支付",
+            "bank": "银行转账",
+            "alipay": "支付宝",
+            "wechat": "微信支付"
+          }
+        },
+        "submit": "确认订阅",
+        "success": {
+          "title": "订阅成功！",
+          "message": "感谢您订阅{plan}方案。我们已向您的邮箱发送了确认邮件，请查收。"
+        }
+      },
+      "contact": {
+        "title": "联系销售团队",
+        "message": "请填写以下信息，我们的销售团队将尽快与您联系。",
+        "fields": {
+          "companyName": "公司名称",
+          "contactName": "联系人",
+          "email": "电子邮箱",
+          "phone": "电话",
+          "volume": "月交易量估计",
+          "requirements": "需求描述"
+        },
+        "submit": "提交",
+        "success": {
+          "title": "提交成功！",
+          "message": "感谢您的咨询。我们的销售团队将在24小时内与您联系。"
+        }
+      }
+    }
+  }
+}

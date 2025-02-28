@@ -3,136 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>钱包 - 加密货币支付网关</title>
+    <title data-i18n="wallet.title">钱包 - 加密货币支付网关</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">支付网关</div>
+            <div class="logo" data-i18n="global.siteName">支付网关</div>
             <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="features.html">功能</a></li>
-                <li><a href="wallet.html">钱包</a></li>
-                <li><a href="api.html">API</a></li>
-                <li><a href="pricing.html">订阅方案</a></li>
-                <li><a href="about.html">关于我们</a></li>
+                <li><a href="index.html" data-i18n="global.nav.home">首页</a></li>
+                <li><a href="features.html" data-i18n="global.nav.features">功能</a></li>
+                <li><a href="wallet.html" data-i18n="global.nav.wallet">钱包</a></li>
+                <li><a href="api.html" data-i18n="global.nav.api">API</a></li>
+                <li><a href="pricing.html" data-i18n="global.nav.pricing">订阅方案</a></li>
+                <li><a href="about.html" data-i18n="global.nav.about">关于我们</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="wallet-intro">
-            <h1>加密货币钱包</h1>
-            <p class="intro-text">我们提供安全、便捷的加密货币钱包解决方案，支持ETH、BNB、USDT和USDC等多种加密货币。</p>
+            <h1 data-i18n="wallet.title">加密货币钱包</h1>
+            <p class="intro-text" data-i18n="wallet.intro">我们提供安全、便捷的加密货币钱包解决方案，支持ETH、BNB、USDT和USDC等多种加密货币。</p>
             
             <div class="wallet-types">
                 <div class="wallet-card">
-                    <h2>托管钱包</h2>
-                    <p>我们的托管钱包服务为您提供更快捷、更便利的支付体验。</p>
+                    <h2 data-i18n="wallet.hostedWallet.title">托管钱包</h2>
+                    <p data-i18n="wallet.hostedWallet.description">我们的托管钱包服务为您提供更快捷、更便利的支付体验。</p>
                     <ul class="wallet-features">
-                        <li>无需安装额外软件</li>
-                        <li>快速支付确认</li>
-                        <li>多重安全保障</li>
-                        <li>余额实时更新</li>
-                        <li>支持多种加密货币</li>
+                        <li data-i18n="wallet.hostedWallet.features.0">无需安装额外软件</li>
+                        <li data-i18n="wallet.hostedWallet.features.1">快速支付确认</li>
+                        <li data-i18n="wallet.hostedWallet.features.2">多重安全保障</li>
+                        <li data-i18n="wallet.hostedWallet.features.3">余额实时更新</li>
+                        <li data-i18n="wallet.hostedWallet.features.4">支持多种加密货币</li>
                     </ul>
-                    <a href="#" class="wallet-button" id="create-hosted-wallet">创建托管钱包</a>
+                    <a href="#" class="wallet-button" id="create-hosted-wallet" data-i18n="wallet.hostedWallet.button">创建托管钱包</a>
                 </div>
                 
                 <div class="wallet-card">
-                    <h2>连接外部钱包</h2>
-                    <p>您也可以连接自己的外部钱包进行支付。</p>
+                    <h2 data-i18n="wallet.externalWallet.title">连接外部钱包</h2>
+                    <p data-i18n="wallet.externalWallet.description">您也可以连接自己的外部钱包进行支付。</p>
                     <ul class="wallet-features">
-                        <li>支持MetaMask</li>
-                        <li>支持Trust Wallet</li>
-                        <li>支持Binance Wallet</li>
-                        <li>完全控制您的资产</li>
-                        <li>无需托管服务</li>
+                        <li data-i18n="wallet.externalWallet.features.0">支持MetaMask</li>
+                        <li data-i18n="wallet.externalWallet.features.1">支持Trust Wallet</li>
+                        <li data-i18n="wallet.externalWallet.features.2">支持Binance Wallet</li>
+                        <li data-i18n="wallet.externalWallet.features.3">完全控制您的资产</li>
+                        <li data-i18n="wallet.externalWallet.features.4">无需托管服务</li>
                     </ul>
-                    <a href="#" class="wallet-button" id="connect-external-wallet">连接外部钱包</a>
+                    <a href="#" class="wallet-button" id="connect-external-wallet" data-i18n="wallet.externalWallet.button">连接外部钱包</a>
                 </div>
             </div>
         </section>
         
         <section class="wallet-security">
-            <h2>安全保障</h2>
+            <h2 data-i18n="wallet.security.title">安全保障</h2>
             <div class="security-features">
                 <div class="security-item">
-                    <h3>多重签名</h3>
-                    <p>所有交易都需要多重签名验证，确保资金安全。</p>
+                    <h3 data-i18n="wallet.security.features.0.title">多重签名</h3>
+                    <p data-i18n="wallet.security.features.0.description">所有交易都需要多重签名验证，确保资金安全。</p>
                 </div>
                 <div class="security-item">
-                    <h3>冷存储</h3>
-                    <p>大部分资金存储在离线冷钱包中，防止黑客攻击。</p>
+                    <h3 data-i18n="wallet.security.features.1.title">冷存储</h3>
+                    <p data-i18n="wallet.security.features.1.description">大部分资金存储在离线冷钱包中，防止黑客攻击。</p>
                 </div>
                 <div class="security-item">
-                    <h3>加密保护</h3>
-                    <p>所有数据传输采用高级加密技术，保护您的隐私。</p>
+                    <h3 data-i18n="wallet.security.features.2.title">加密保护</h3>
+                    <p data-i18n="wallet.security.features.2.description">所有数据传输采用高级加密技术，保护您的隐私。</p>
                 </div>
                 <div class="security-item">
-                    <h3>定期审计</h3>
-                    <p>系统定期进行安全审计，及时发现并修复潜在风险。</p>
+                    <h3 data-i18n="wallet.security.features.3.title">定期审计</h3>
+                    <p data-i18n="wallet.security.features.3.description">系统定期进行安全审计，及时发现并修复潜在风险。</p>
                 </div>
             </div>
         </section>
         
         <section class="wallet-demo">
-            <h2>钱包演示</h2>
+            <h2 data-i18n="wallet.demo.title">钱包演示</h2>
             <div class="demo-container">
                 <div class="demo-wallet">
                     <div class="wallet-header">
-                        <h3>托管钱包演示</h3>
-                        <span class="wallet-balance">余额: 1500 USDT</span>
+                        <h3 data-i18n="wallet.demo.walletHeader">托管钱包演示</h3>
+                        <span class="wallet-balance" data-i18n="wallet.demo.balance">余额: 1500 USDT</span>
                     </div>
                     <div class="wallet-body">
                         <div class="wallet-assets">
                             <div class="asset-item">
                                 <img src="images/eth.svg" alt="ETH">
                                 <div class="asset-info">
-                                    <span class="asset-name">以太坊 (ETH)</span>
-                                    <span class="asset-balance">0.5 ETH</span>
+                                    <span class="asset-name" data-i18n="wallet.demo.assets.eth.name">以太坊 (ETH)</span>
+                                    <span class="asset-balance" data-i18n="wallet.demo.assets.eth.balance">0.5 ETH</span>
                                 </div>
                             </div>
                             <div class="asset-item">
                                 <img src="images/bnb.svg" alt="BNB">
                                 <div class="asset-info">
-                                    <span class="asset-name">币安币 (BNB)</span>
-                                    <span class="asset-balance">2.0 BNB</span>
+                                    <span class="asset-name" data-i18n="wallet.demo.assets.bnb.name">币安币 (BNB)</span>
+                                    <span class="asset-balance" data-i18n="wallet.demo.assets.bnb.balance">2.0 BNB</span>
                                 </div>
                             </div>
                             <div class="asset-item">
                                 <img src="images/usdt.svg" alt="USDT">
                                 <div class="asset-info">
-                                    <span class="asset-name">USDT</span>
-                                    <span class="asset-balance">1000 USDT</span>
+                                    <span class="asset-name" data-i18n="wallet.demo.assets.usdt.name">USDT</span>
+                                    <span class="asset-balance" data-i18n="wallet.demo.assets.usdt.balance">1000 USDT</span>
                                 </div>
                             </div>
                             <div class="asset-item">
                                 <img src="images/usdc.svg" alt="USDC">
                                 <div class="asset-info">
-                                    <span class="asset-name">USDC</span>
-                                    <span class="asset-balance">500 USDC</span>
+                                    <span class="asset-name" data-i18n="wallet.demo.assets.usdc.name">USDC</span>
+                                    <span class="asset-balance" data-i18n="wallet.demo.assets.usdc.balance">500 USDC</span>
                                 </div>
                             </div>
                         </div>
                         <div class="wallet-actions">
-                            <button class="action-button" id="demo-deposit">充值</button>
-                            <button class="action-button" id="demo-withdraw">提现</button>
-                            <button class="action-button" id="demo-pay">支付</button>
+                            <button class="action-button" id="demo-deposit" data-i18n="wallet.demo.actions.deposit">充值</button>
+                            <button class="action-button" id="demo-withdraw" data-i18n="wallet.demo.actions.withdraw">提现</button>
+                            <button class="action-button" id="demo-pay" data-i18n="wallet.demo.actions.pay">支付</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <p class="demo-note">注意：这只是一个演示界面，不涉及实际资金。</p>
+            <p class="demo-note" data-i18n="wallet.demo.note">注意：这只是一个演示界面，不涉及实际资金。</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 加密货币支付网关</p>
+        <p data-i18n="global.footer.copyright">&copy; 2025 加密货币支付网关</p>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/wallet.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>
